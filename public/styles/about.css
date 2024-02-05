@@ -4,9 +4,27 @@
     gap: 24px;
 }
 
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .about__description {
     font-size: 16px;
     line-height: 125%;
+}
+
+.facts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.facts-list > li {
+    list-style: circle;
+    margin-left: 32px;
+    font-size: 16px;
 }
 
 .skills {
@@ -67,11 +85,19 @@
 }
 
 @media screen and (min-width: 700px) {
+    .about {
+        padding-top: 30px;
+    }
+
     .about__description {
-        margin-top: 30px;
         width: 70%;
         font-size: 18px;
     }
+
+    .facts-list > li {
+        font-size: 18px;
+    }
+    
 
     .skills {
         height: 100%;

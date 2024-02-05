@@ -66,6 +66,7 @@
 
 @media screen and (min-width: 700px) {
     .contacts-aside {
+        max-height: calc(100vh - 80px);
         height: inherit;
         display: grid;
         grid-template-rows: auto 1fr;

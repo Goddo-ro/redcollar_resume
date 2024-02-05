@@ -1,9 +1,11 @@
 @import url(reset.css);
+@import url(contacts.css);
+@import url(about.css);
 
 :root {
     --white-color: #ffffff;
     --black-color: #000000;
-    --red-color: #F51B1B;
+    --accent-color: #F51B1B;
 }
 
 * {
@@ -15,10 +17,17 @@
 body {
     background-color: var(--black-color);
     padding: 20px;
+    min-height: 100vh;
+    position: relative;
 }
 
 a {
     text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+    border-bottom: 1px solid var(--white-color);
 }
 
 main {
@@ -26,65 +35,20 @@ main {
     margin-bottom: 48px;
 }
 
-.contacts-aside {
-    display: flex;
-    flex-direction: column;
-}
-
-.contacts-aside__photo {
-    width: 100%;
-}
-
-.contacts-container {
-    background-color: var(--red-color);
-    margin-top: -48px;
-    padding: 24px 16px 40px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    position: relative;
-}
-
-.contacts-container::before {
-    content: "";
-    background-image: url("../icons/arrow.svg");
-    background-position: center;
-    position: absolute;
-    top: -19px;
-    left: 0;
-    height: 19px;
-    width: 100%;
-}
-
-.name-container {
-    margin-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.name-container__name {
-    font-size: 20px;
-    line-height: 120%;
-}
-
-.name-container__add-info {
-    font-size: 16px;
-    line-height: 125%;
-}
-
-.contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contacts__contact {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-}
-
-.contacts-contacts > a {
-    font-size: 16px;
-    line-height: 125%;
+@media screen and (min-width: 700px) {
+    body {
+        padding: 40px;
+    }
+    
+    header {
+        position: absolute;
+        right: 40px;
+    }
+    
+    main {
+        margin: 0;
+        display: flex;
+        gap: 20px;
+        min-height: calc(100vh - 80px);
+    }
 }
